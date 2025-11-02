@@ -10,6 +10,8 @@ public class Ball : MonoBehaviour
     public float g = 9.8f;
     public float suelo = 0f;
 
+
+
     void Start()
     {
         position = transform.position;
