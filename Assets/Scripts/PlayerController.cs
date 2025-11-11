@@ -226,12 +226,12 @@ public class PlayerController : MonoBehaviour
         // ---------- SALTO ----------
         if (jumpRequest && onGround)
         {
-            // impulso vertical
+    
             Vector2 up = transform.up.normalized;
             velocidad += up * jumpImpulse;
 
-            // Lean horizontal REAL
-            float leanRaw = LeanRaw();                // [-1..+1]
+      
+            float leanRaw = LeanRaw();              
             jumpLeanSign = Mathf.Sign(leanRaw == 0f ? (Random.value - 0.5f) : leanRaw);
 
             float dir = Mathf.Sign(leanRaw);
@@ -249,17 +249,16 @@ public class PlayerController : MonoBehaviour
             activeTimer = wobbleActiveHold;
             sleeping = false;
 
-            // ---- Disparar pierna ----
+   
             if (enableKickLeg)
             {
                 legTimer = legSwingTime + legRetractTime;
-                legSwingPhase = true;   // primero sube (golpea)
+                legSwingPhase = true;  
                 legActive = true;
             }
         }
         else jumpRequest = false;
 
-        // ---------- FOLLOW-THRUST aire ----------
         if (!onGround && followTimer > 0f)
         {
             float leanRaw = LeanRaw();
@@ -271,15 +270,12 @@ public class PlayerController : MonoBehaviour
                 velocidad.x = Mathf.Sign(velocidad.x) * maxAirSpeed;
         }
 
-        // ---------- GRAVEDAD / AIRE ----------
         velocidad.y += -g * dt;
         if (!onGround && airLinearDamping > 0f)
             velocidad.x *= Mathf.Clamp01(1f - airLinearDamping * dt);
 
-        // ---------- INTEGRACIÓN ----------
         posicion += velocidad * dt;
 
-        // ---------- SUELO con cápsula ----------
         GetCapsuleSegmentWorldAt(posicion, out var bot, out var top);
         float lowestCircleY = Mathf.Min(bot.y, top.y);
         float lowestY = lowestCircleY - colRadius;
@@ -337,7 +333,7 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        // Fricción en piso (dinámica + estática) + límite
+ 
         if (onGround)
         {
             velocidad.x = Mathf.MoveTowards(velocidad.x, 0f, friccionSuelo * dt);
@@ -346,21 +342,20 @@ public class PlayerController : MonoBehaviour
             velocidad.x = Mathf.Clamp(velocidad.x, -maxGroundSpeed, maxGroundSpeed);
         }
 
-        // ---------- TRANSFORM ----------
+ 
         transform.position = new Vector3(posicion.x, posicion.y, transform.position.z);
 
-        // ---------- PIERNA: cinemática y posición/vel ----------
+   
         UpdateLegKinematics(dt);
     }
 
-    // === Lean horizontal REAL: transform.up.x (independiente de Euler y robusto a wraps) ===
     float LeanRaw()
     {
-        float x = transform.up.x; // >0: cabeza hacia la DERECHA en pantalla
+        float x = transform.up.x; 
         return invertLeanSign ? -x : x;
     }
 
-    // Segmento de cápsula en mundo
+
     public void GetCapsuleSegmentWorldAt(Vector2 center, out Vector2 bot, out Vector2 top)
     {
         Vector2 up = transform.up.normalized;
@@ -370,10 +365,9 @@ public class PlayerController : MonoBehaviour
         bot = c - up * colHalfHeight;
     }
 
-    // ============ PIERNA: mundo ============
+    // ============ PIERNA============
     void UpdateLegKinematics(float dt)
     {
-        // calcular ángulo de la pierna (local al player: 0° = +right)
         float localDeg = legRestAngleDeg;
 
         if (enableKickLeg && legActive)
@@ -381,17 +375,16 @@ public class PlayerController : MonoBehaviour
             legTimer -= dt;
             if (legSwingPhase)
             {
-                float t = Mathf.Clamp01((legSwingTime - Mathf.Max(0f, legTimer - legRetractTime)) / Mathf.Max(0.0001f, legSwingTime));
-                // ease-out (golpe rápido al inicio)
+                float t = Mathf.Clamp01((legSwingTime - Mathf.Max(0f, legTimer - legRetractTime)) / Mathf.Max(0.0001f, legSwingTime));          
                 float s = 1f - (1f - t) * (1f - t);
                 localDeg = legRestAngleDeg + legSwingAngleDeg * s;
 
-                if (t >= 0.999f) legSwingPhase = false; // pasa a retract
+                if (t >= 0.999f) legSwingPhase = false; 
             }
             else
             {
                 float t = Mathf.Clamp01((legRetractTime - Mathf.Max(0f, legTimer)) / Mathf.Max(0.0001f, legRetractTime));
-                // ease-in (regreso suave)
+             
                 float s = t * t;
                 localDeg = legRestAngleDeg + legSwingAngleDeg * (1f - s);
             }
@@ -408,35 +401,32 @@ public class PlayerController : MonoBehaviour
         Vector2 up = transform.up.normalized;
         Vector2 right = transform.right.normalized;
 
-        // centro de colisión (como cápsula)
+      
         Vector2 c = posicion + right * colCenterOffset.x + up * colCenterOffset.y;
-        // hip en mundo
+        
         legHipWorld = c + right * legHipLocal.x + up * legHipLocal.y;
 
-        // dirección de la pierna en mundo: rotar "right" por localDeg alrededor de Z
+        
         float rad = localDeg * Mathf.Deg2Rad;
-        Vector2 dirLocal = new Vector2(Mathf.Cos(rad), Mathf.Sin(rad)); // en coords del player (right, up)
+        Vector2 dirLocal = new Vector2(Mathf.Cos(rad), Mathf.Sin(rad)); 
         Vector2 dirWorld = (right * dirLocal.x + up * dirLocal.y).normalized;
 
         legTipWorld = legHipWorld + dirWorld * Mathf.Max(0.01f, legLength);
-        legAngleWorldDeg = localDeg + Vector2.SignedAngle(Vector2.right, right); // info útil para debug
+        legAngleWorldDeg = localDeg + Vector2.SignedAngle(Vector2.right, right); 
 
-        // velocidad de la punta (diferencia simple frame a frame + velocidad del cuerpo ya incluida por posicion)
+        // velocidad de la punta 
         Vector2 prevTip = new Vector2(legPrevTipX, legPrevTipY);
         legTipVelWorld = (legTipWorld - prevTip) / Mathf.Max(0.0001f, dt);
         legPrevTipX = legTipWorld.x;
         legPrevTipY = legTipWorld.y;
     }
 
-    // Entrega el segmento de la pierna (para colisiones)
     public void GetLegSegmentWorld(out Vector2 hip, out Vector2 tip, out float radius)
     {
         hip = legHipWorld;
         tip = legTipWorld;
         radius = Mathf.Max(0.0001f, legRadius);
     }
-
-    // ¿Está en fase de golpe?
     public bool IsLegStriking() => enableKickLeg && legActive && legSwingPhase;
 
     // Gizmo para ajustar cápsula y pierna
