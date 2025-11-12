@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 1437c125bb25e924c931562007578490
+guid: 51c0d8a06709f904ea510ec67e5d96b9
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5623194428626525839
-    second: test_0
+      213: 2186908673665636300
+    second: PIERNA_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -75,7 +75,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 2
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -100,23 +100,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: test_0
+      name: PIERNA_0
       rect:
         serializedVersion: 2
-        x: 721
-        y: 468
-        width: 63
-        height: 203
-      alignment: 9
-      pivot: {x: 0.52048165, y: 0.0359927}
+        x: 13
+        y: 0
+        width: 36
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 171a2cac57666f1b0800000000000000
-      internalID: -5623194428626525839
+      spriteID: cc79f0a1ad5795e10800000000000000
+      internalID: 2186908673665636300
       vertices: []
       indices: 
       edges: []
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: aa701f0549e09d044b2d1d5ff4a9cc37
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      test_0: -5623194428626525839
+      PIERNA_0: 2186908673665636300
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
