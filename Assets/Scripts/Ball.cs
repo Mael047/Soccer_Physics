@@ -10,11 +10,13 @@ public class Ball : MonoBehaviour
     public float g = 9.8f;
     public float suelo = 0f;
 
-
+    public float spin = 1.2f;
+    float spinAngle;
 
     void Start()
     {
         position = transform.position;
+        spinAngle = transform.eulerAngles.z;
     }
 
     void FixedUpdate()
@@ -31,6 +33,10 @@ public class Ball : MonoBehaviour
         }
 
         transform.position = new Vector3(position.x, position.y, transform.position.z);
+
+        float angleSpeed = -velocity.x / Mathf.Max(0.0001f, radius)* Mathf.Rad2Deg * spin;
+        spinAngle += angleSpeed * dt;
+        transform.rotation = Quaternion.Euler(0f, 0f, spinAngle);
     }
 
 }

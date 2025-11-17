@@ -11,7 +11,7 @@ public class Colisiones : MonoBehaviour
     [Range(0f, 1f)] public float penetrationPercent = 0.8f;
     public float penetrationSlop = 0.001f;
 
-    // === NUEVO: controles de suavidad de la patada ===
+    // === controles de suavidad de la patada ===
     [Header("Patada - suavizado / límites")]
     [Tooltip("Escala global del impulso generado por la pierna.")]
     [Range(0f, 1f)] public float legImpulseScale = 0.55f;
@@ -22,11 +22,15 @@ public class Colisiones : MonoBehaviour
     [Tooltip("Factor de blending para no cambiar bruscamente la velocidad al hacer clamp.")]
     [Range(0f, 1f)] public float legClampBlend = 0.35f;
 
+    [Header("Sonido")]
+    public AudioSource audioSource;
+    public AudioClip kickSound;
+
     void FixedUpdate()
     {
         if (playerA && playerB) ResolveCapsuleVsCapsule(playerA, playerB);
 
-        // Pierna primero (con límites)
+        // Pierna primero
         if (playerA && ball) ResolveLegVsCircle(playerA, ball);
         if (playerB && ball) ResolveLegVsCircle(playerB, ball);
 
@@ -80,7 +84,7 @@ public class Colisiones : MonoBehaviour
         radius = Mathf.Max(0.0001f, p.colRadius);
     }
 
-    // ==== Jugador (pierna) vs Pelota (círculo) con clamp de impulso/velocidad ====
+    // ==== Jugador vs Pelota ====
     bool ResolveLegVsCircle(PlayerController p, Ball b)
     {
         if (!p || !p.enableKickLeg) return false;
@@ -123,7 +127,7 @@ public class Colisiones : MonoBehaviour
 
         float j = -(1f + eEff) * vn / invB;
 
-        // === NUEVO: limitar el impulso de la pierna ===
+        // === limitar el impulso de la pierna ===
         j *= Mathf.Clamp01(legImpulseScale);
 
         Vector2 impulse = j * n;
@@ -131,25 +135,28 @@ public class Colisiones : MonoBehaviour
 
         if (p.IsLegStriking())
         {
-            // boost pero suave (ya estaba en PlayerController)
+            // boost pero suave 
             velB += n * p.legExtraKickSpeed;
         }
 
-        // === NUEVO: clamp de velocidad post-patada ===
         float vmag = velB.magnitude;
         if (vmag > legMaxPostSpeed)
         {
-            // blending para que el recorte no se sienta brusco
             Vector2 clamped = velB.normalized * legMaxPostSpeed;
             velB = Vector2.Lerp(velB, clamped, Mathf.Clamp01(legClampBlend));
         }
 
         b.position = posB; b.velocity = velB;
         b.transform.position = new Vector3(posB.x, posB.y, b.transform.position.z);
+
+        if(audioSource && kickSound && p.IsLegStriking())
+        {
+            audioSource.PlayOneShot(kickSound);
+        }
         return true;
     }
 
-    // ==== Jugador (cápsula) vs Pelota (círculo) ====
+    // ==== Jugador vs Pelota  ====
     bool ResolveCapsuleVsCircle(PlayerController p, Ball b)
     {
         Vector2 posA = p.posicion;
@@ -207,7 +214,7 @@ public class Colisiones : MonoBehaviour
         return true;
     }
 
-    // ==== Jugador (cápsula) vs Jugador (cápsula) ====
+    // ==== Jugador vs Jugador ====
     bool ResolveCapsuleVsCapsule(PlayerController A, PlayerController B)
     {
         Vector2 posA = A.posicion, velA = A.velocidad;

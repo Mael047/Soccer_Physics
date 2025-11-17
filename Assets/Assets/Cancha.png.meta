@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 70db8fe770ac5a445a084e821e8db2a9
+guid: 627d3ed9b5ea6c34ba9f82d769f83619
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3732281145530446982
-    second: 2_PIERNA._0
+      213: -6905885105644833219
+    second: Cancha_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 2_PIERNA._0
+      name: Cancha_0
       rect:
         serializedVersion: 2
-        x: 13
-        y: 0
-        width: 36
-        height: 66
+        x: 206
+        y: 239
+        width: 456
+        height: 602
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a7b05c69216443cc0800000000000000
-      internalID: -3732281145530446982
+      spriteID: d36f06ad51e5920a0800000000000000
+      internalID: -6905885105644833219
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      2_PIERNA._0: -3732281145530446982
+      Cancha_0: -6905885105644833219
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

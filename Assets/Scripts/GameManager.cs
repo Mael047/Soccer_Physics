@@ -18,6 +18,10 @@ public class GameManager : MonoBehaviour
     public Transform spawnA;
     public Transform spawnB;
 
+    [Header("Spawns Balon")]
+    public Transform ballSpawnA;
+    public Transform ballSpawnB;
+
     [Header("UI (TMP)")]
     public TMP_Text scoreText;
     public TMP_Text bannerText;
@@ -26,11 +30,19 @@ public class GameManager : MonoBehaviour
     public int maxGoals = 7;
     public float bannerTime = 1.1f;
     public float resetDelay = 0.4f;
+    public float resetTime = 3f;
 
     [Header("Kickoff opcional")]
     public float kickoffImpulseX = 0f; // ej: 1.5f
     public float kickoffImpulseY = 0f; // ej: 0.8f
 
+    [Header("Sonidos")]
+    public AudioSource audioSource;
+    public AudioClip goalSound;
+    public AudioClip General;
+    public AudioClip startMatch;
+
+    public Menu Menu;
     int scoreA, scoreB;
     bool roundLock;
 
@@ -55,6 +67,11 @@ public class GameManager : MonoBehaviour
 
         UpdateScoreUI();
         HideBanner();
+
+        if(audioSource && General)
+        {
+            audioSource.PlayOneShot(General);
+        }
     }
 
     public void OnGoal(int scorerId)
@@ -67,6 +84,11 @@ public class GameManager : MonoBehaviour
 
         ShowBanner($"¡Gol de Player {scorerId}!");
         UpdateScoreUI();
+
+        if (audioSource && goalSound)
+        {
+            audioSource.PlayOneShot(goalSound);
+        }
 
         if (scoreA >= maxGoals || scoreB >= maxGoals)
             StartCoroutine(EndMatch());
@@ -85,6 +107,11 @@ public class GameManager : MonoBehaviour
         if (leftGoal) leftGoal.ResetSensor();
         if (rightGoal) rightGoal.ResetSensor();
 
+        if(audioSource && startMatch)
+        {
+            audioSource.PlayOneShot(startMatch);
+        }
+
         yield return new WaitForSeconds(resetDelay);
         HideBanner();
         roundLock = false;
@@ -92,10 +119,27 @@ public class GameManager : MonoBehaviour
 
     IEnumerator EndMatch()
     {
-        yield return new WaitForSeconds(bannerTime);
         string winner = (scoreA > scoreB) ? "Player 1" : "Player 2";
         ShowBanner($"Partido terminado. ¡Gana {winner}!");
+        yield return new WaitForSeconds(resetTime);
+        Menu.Volver();
         Debug.Log("[GameManager] Fin de partido. Usa R para reiniciar.");
+    }
+
+    Vector3 GetBallSpawnPosition()
+    {
+        if (ballSpawnA != null && ballSpawnB != null)
+        {
+            Transform chosen = (Random.value < 0.5f) ? ballSpawnA : ballSpawnB;
+            Vector3 p = chosen.position;
+
+            if (ball != null)
+            {
+                p.z = ball.transform.position.z;
+                return p;
+            }
+        }
+        return spawnBall ? spawnBall.position : initBall;
     }
 
     void DoHardResetPositions()
@@ -105,7 +149,7 @@ public class GameManager : MonoBehaviour
             Debug.LogWarning("[GameManager] No se capturaron inicios (faltan refs). Se usa origen (0,0,0). Asigna ball/playerA/playerB en el inspector.");
         }
 
-        Vector3 pBall = spawnBall ? spawnBall.position : initBall;
+        Vector3 pBall = GetBallSpawnPosition();
         Vector3 pA = spawnA ? spawnA.position : initA;
         Vector3 pB = spawnB ? spawnB.position : initB;
 
@@ -139,7 +183,7 @@ public class GameManager : MonoBehaviour
 
     void UpdateScoreUI()
     {
-        if (scoreText) scoreText.text = $"P1 {scoreA} - {scoreB} P2";
+        if (scoreText) scoreText.text = $"{scoreA} - {scoreB}";
     }
 
     void ShowBanner(string msg)
@@ -152,7 +196,7 @@ public class GameManager : MonoBehaviour
         if (bannerText) bannerText.gameObject.SetActive(false);
     }
 
-    // DEBUG manual: R para resetear la ronda
+    // R para resetear la ronda
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.R) && !roundLock)
