@@ -1,0 +1,1300 @@
+fileFormatVersion: 2
+guid: f747da0bbbb962c47aa2937fba5e3dab
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2816177724701420838
+    second: LOGO_UMNG_0
+  - first:
+      213: 9051225175996887688
+    second: LOGO_UMNG_1
+  - first:
+      213: -9150422640558530255
+    second: LOGO_UMNG_2
+  - first:
+      213: -6898621393652717438
+    second: LOGO_UMNG_3
+  - first:
+      213: -7693322741530106587
+    second: LOGO_UMNG_4
+  - first:
+      213: 2685385718233612495
+    second: LOGO_UMNG_5
+  - first:
+      213: -1482397115696206993
+    second: LOGO_UMNG_6
+  - first:
+      213: 413501574516714845
+    second: LOGO_UMNG_7
+  - first:
+      213: 8182578108737555305
+    second: LOGO_UMNG_8
+  - first:
+      213: -1392146802633787751
+    second: LOGO_UMNG_9
+  - first:
+      213: -1594269677659444751
+    second: LOGO_UMNG_10
+  - first:
+      213: 2444022982615793101
+    second: LOGO_UMNG_11
+  - first:
+      213: 1922700319078277840
+    second: LOGO_UMNG_12
+  - first:
+      213: -4731618487703950568
+    second: LOGO_UMNG_13
+  - first:
+      213: -7499552569920655852
+    second: LOGO_UMNG_14
+  - first:
+      213: -8438803291907726072
+    second: LOGO_UMNG_15
+  - first:
+      213: 1004760857738917883
+    second: LOGO_UMNG_16
+  - first:
+      213: 6672852871338693304
+    second: LOGO_UMNG_17
+  - first:
+      213: -5351308440756134548
+    second: LOGO_UMNG_18
+  - first:
+      213: -3915188305332960078
+    second: LOGO_UMNG_19
+  - first:
+      213: -7967818939640969859
+    second: LOGO_UMNG_20
+  - first:
+      213: -6394285633906269263
+    second: LOGO_UMNG_21
+  - first:
+      213: -7321457679383090451
+    second: LOGO_UMNG_22
+  - first:
+      213: 9141636433983619046
+    second: LOGO_UMNG_23
+  - first:
+      213: -2054615190292818011
+    second: LOGO_UMNG_24
+  - first:
+      213: -5633136345579671845
+    second: LOGO_UMNG_25
+  - first:
+      213: 203281330283471385
+    second: LOGO_UMNG_26
+  - first:
+      213: 5304606109030037286
+    second: LOGO_UMNG_27
+  - first:
+      213: 3011999053980339291
+    second: LOGO_UMNG_28
+  - first:
+      213: -3051147613489777978
+    second: LOGO_UMNG_29
+  - first:
+      213: -2457632063094128754
+    second: LOGO_UMNG_30
+  - first:
+      213: -6342855478704209893
+    second: LOGO_UMNG_31
+  - first:
+      213: -6788877789812860560
+    second: LOGO_UMNG_32
+  - first:
+      213: -6348874995836022002
+    second: LOGO_UMNG_33
+  - first:
+      213: 4525506277883586069
+    second: LOGO_UMNG_34
+  - first:
+      213: -5954112706778288753
+    second: LOGO_UMNG_35
+  - first:
+      213: -534514738584652304
+    second: LOGO_UMNG_36
+  - first:
+      213: -1185767745038952282
+    second: LOGO_UMNG_37
+  - first:
+      213: -2605557757883941466
+    second: LOGO_UMNG_38
+  - first:
+      213: 1228608460387950830
+    second: LOGO_UMNG_39
+  - first:
+      213: -9009699529033337625
+    second: LOGO_UMNG_40
+  - first:
+      213: 6241185031880194958
+    second: LOGO_UMNG_41
+  - first:
+      213: 2810503610095968193
+    second: LOGO_UMNG_42
+  - first:
+      213: 856832820602965398
+    second: LOGO_UMNG_43
+  - first:
+      213: 3157054590536998680
+    second: LOGO_UMNG_44
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: LOGO_UMNG_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 827
+        width: 1023
+        height: 371
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62d223948b2151720800000000000000
+      internalID: 2816177724701420838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LOGO_UMNG_1
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 406
+        width: 477
+        height: 577
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 882fd5597596c9d70800000000000000
+      internalID: 9051225175996887688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LOGO_UMNG_2
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 669
+        width: 53
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13121d4e61b230180800000000000000
+      internalID: -9150422640558530255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LOGO_UMNG_3
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 740
+        width: 46
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2886b67946c2340a0800000000000000
+      internalID: -6898621393652717438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LOGO_UMNG_4
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 740
+        width: 46
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 525e9a04ab3db3590800000000000000
+      internalID: -7693322741530106587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LOGO_UMNG_5
+      rect:
+        serializedVersion: 2
+        x: 848
+        y: 669
+        width: 53
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc0c83c3518644520800000000000000
+      internalID: 2685385718233612495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LOGO_UMNG_6
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 591
+        width: 59
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6b2dd66da77d6be0800000000000000
+      internalID: -1482397115696206993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LOGO_UMNG_7
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 501
+        width: 68
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5d222fbd7d0db500800000000000000
+      internalID: 413501574516714845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LOGO_UMNG_8
+      rect:
+        serializedVersion: 2
+        x: 847
+        y: 501
+        width: 69
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96b803ecf6b5e8170800000000000000
+      internalID: 8182578108737555305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LOGO_UMNG_9
+      rect:
+        serializedVersion: 2
+        x: 860
+        y: 591
+        width: 59
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99631d1ebd91eace0800000000000000
+      internalID: -1392146802633787751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LOGO_UMNG_10
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 414
+        width: 89
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f9aeeacc2400e9e0800000000000000
+      internalID: -1594269677659444751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LOGO_UMNG_11
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 351
+        width: 91
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dcd74b524f9eae120800000000000000
+      internalID: 2444022982615793101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LOGO_UMNG_12
+      rect:
+        serializedVersion: 2
+        x: 727
+        y: 351
+        width: 91
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d2e038d0cdceaa10800000000000000
+      internalID: 1922700319078277840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LOGO_UMNG_13
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 414
+        width: 88
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81b2cbbfd0ae55eb0800000000000000
+      internalID: -4731618487703950568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LOGO_UMNG_14
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 256
+        width: 595
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41ee2870cac3ce790800000000000000
+      internalID: -7499552569920655852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LOGO_UMNG_15
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 132
+        width: 63
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8056170ed1953ea80800000000000000
+      internalID: -8438803291907726072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LOGO_UMNG_16
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 133
+        width: 54
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf7beb93da0a1fd00800000000000000
+      internalID: 1004760857738917883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LOGO_UMNG_17
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 134
+        width: 17
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b2969a055cba9c50800000000000000
+      internalID: 6672852871338693304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LOGO_UMNG_18
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 134
+        width: 58
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6d5e2953555cb5b0800000000000000
+      internalID: -5351308440756134548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LOGO_UMNG_19
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 134
+        width: 38
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b48dd7daf47aa9c0800000000000000
+      internalID: -3915188305332960078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LOGO_UMNG_20
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 132
+        width: 45
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d750214c3ee9c6190800000000000000
+      internalID: -7967818939640969859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LOGO_UMNG_21
+      rect:
+        serializedVersion: 2
+        x: 362
+        y: 132
+        width: 37
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b322a6281fe247a0800000000000000
+      internalID: -6394285633906269263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LOGO_UMNG_22
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 134
+        width: 16
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: deaa0560805f46a90800000000000000
+      internalID: -7321457679383090451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LOGO_UMNG_23
+      rect:
+        serializedVersion: 2
+        x: 429
+        y: 134
+        width: 56
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6efbc59f6ed9dde70800000000000000
+      internalID: 9141636433983619046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LOGO_UMNG_24
+      rect:
+        serializedVersion: 2
+        x: 484
+        y: 133
+        width: 59
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a79978ce5a8c73e0800000000000000
+      internalID: -2054615190292818011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LOGO_UMNG_25
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 134
+        width: 56
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bdea16ed65413d1b0800000000000000
+      internalID: -5633136345579671845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LOGO_UMNG_26
+      rect:
+        serializedVersion: 2
+        x: 626
+        y: 134
+        width: 86
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 912e309fa4332d200800000000000000
+      internalID: 203281330283471385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LOGO_UMNG_27
+      rect:
+        serializedVersion: 2
+        x: 722
+        y: 134
+        width: 16
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6273a12b62fbd9940800000000000000
+      internalID: 5304606109030037286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LOGO_UMNG_28
+      rect:
+        serializedVersion: 2
+        x: 747
+        y: 134
+        width: 39
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5c8f4c6e25ccc920800000000000000
+      internalID: 3011999053980339291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LOGO_UMNG_29
+      rect:
+        serializedVersion: 2
+        x: 789
+        y: 134
+        width: 16
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c239a4496528a5d0800000000000000
+      internalID: -3051147613489777978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LOGO_UMNG_30
+      rect:
+        serializedVersion: 2
+        x: 809
+        y: 134
+        width: 48
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8ff9a2e8acb4edd0800000000000000
+      internalID: -2457632063094128754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LOGO_UMNG_31
+      rect:
+        serializedVersion: 2
+        x: 854
+        y: 134
+        width: 58
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b10023a4c86a9f7a0800000000000000
+      internalID: -6342855478704209893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LOGO_UMNG_32
+      rect:
+        serializedVersion: 2
+        x: 914
+        y: 132
+        width: 45
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0795aa28e9f09c1a0800000000000000
+      internalID: -6788877789812860560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LOGO_UMNG_33
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 0
+        width: 84
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0395dd34d344e7a0800000000000000
+      internalID: -6348874995836022002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LOGO_UMNG_34
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 0
+        width: 64
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5162d0a8bf3ddce30800000000000000
+      internalID: 4525506277883586069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LOGO_UMNG_35
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 1
+        width: 48
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8d27d71a0ebe5da0800000000000000
+      internalID: -5954112706778288753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LOGO_UMNG_36
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 0
+        width: 73
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f5737f5da50598f0800000000000000
+      internalID: -534514738584652304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LOGO_UMNG_37
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 0
+        width: 73
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a856d2b48e4b8fe0800000000000000
+      internalID: -1185767745038952282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LOGO_UMNG_38
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 0
+        width: 86
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ad7097260337dbd0800000000000000
+      internalID: -2605557757883941466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LOGO_UMNG_39
+      rect:
+        serializedVersion: 2
+        x: 542
+        y: 0
+        width: 57
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee0a671a2e4ec0110800000000000000
+      internalID: 1228608460387950830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LOGO_UMNG_40
+      rect:
+        serializedVersion: 2
+        x: 597
+        y: 0
+        width: 73
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e4b6f6830e17f280800000000000000
+      internalID: -9009699529033337625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LOGO_UMNG_41
+      rect:
+        serializedVersion: 2
+        x: 671
+        y: 0
+        width: 68
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8b34b228b42d9650800000000000000
+      internalID: 6241185031880194958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LOGO_UMNG_42
+      rect:
+        serializedVersion: 2
+        x: 743
+        y: 0
+        width: 74
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1cf19b7842ae00720800000000000000
+      internalID: 2810503610095968193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LOGO_UMNG_43
+      rect:
+        serializedVersion: 2
+        x: 820
+        y: 0
+        width: 70
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69d8fef19e414eb00800000000000000
+      internalID: 856832820602965398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LOGO_UMNG_44
+      rect:
+        serializedVersion: 2
+        x: 890
+        y: 0
+        width: 73
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81f597d5c6c10db20800000000000000
+      internalID: 3157054590536998680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      LOGO_UMNG_0: 2816177724701420838
+      LOGO_UMNG_1: 9051225175996887688
+      LOGO_UMNG_10: -1594269677659444751
+      LOGO_UMNG_11: 2444022982615793101
+      LOGO_UMNG_12: 1922700319078277840
+      LOGO_UMNG_13: -4731618487703950568
+      LOGO_UMNG_14: -7499552569920655852
+      LOGO_UMNG_15: -8438803291907726072
+      LOGO_UMNG_16: 1004760857738917883
+      LOGO_UMNG_17: 6672852871338693304
+      LOGO_UMNG_18: -5351308440756134548
+      LOGO_UMNG_19: -3915188305332960078
+      LOGO_UMNG_2: -9150422640558530255
+      LOGO_UMNG_20: -7967818939640969859
+      LOGO_UMNG_21: -6394285633906269263
+      LOGO_UMNG_22: -7321457679383090451
+      LOGO_UMNG_23: 9141636433983619046
+      LOGO_UMNG_24: -2054615190292818011
+      LOGO_UMNG_25: -5633136345579671845
+      LOGO_UMNG_26: 203281330283471385
+      LOGO_UMNG_27: 5304606109030037286
+      LOGO_UMNG_28: 3011999053980339291
+      LOGO_UMNG_29: -3051147613489777978
+      LOGO_UMNG_3: -6898621393652717438
+      LOGO_UMNG_30: -2457632063094128754
+      LOGO_UMNG_31: -6342855478704209893
+      LOGO_UMNG_32: -6788877789812860560
+      LOGO_UMNG_33: -6348874995836022002
+      LOGO_UMNG_34: 4525506277883586069
+      LOGO_UMNG_35: -5954112706778288753
+      LOGO_UMNG_36: -534514738584652304
+      LOGO_UMNG_37: -1185767745038952282
+      LOGO_UMNG_38: -2605557757883941466
+      LOGO_UMNG_39: 1228608460387950830
+      LOGO_UMNG_4: -7693322741530106587
+      LOGO_UMNG_40: -9009699529033337625
+      LOGO_UMNG_41: 6241185031880194958
+      LOGO_UMNG_42: 2810503610095968193
+      LOGO_UMNG_43: 856832820602965398
+      LOGO_UMNG_44: 3157054590536998680
+      LOGO_UMNG_5: 2685385718233612495
+      LOGO_UMNG_6: -1482397115696206993
+      LOGO_UMNG_7: 413501574516714845
+      LOGO_UMNG_8: 8182578108737555305
+      LOGO_UMNG_9: -1392146802633787751
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
