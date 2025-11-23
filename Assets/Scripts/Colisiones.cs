@@ -7,6 +7,9 @@ public class Colisiones : MonoBehaviour
     public PlayerController playerA;
     public PlayerController playerB;
 
+    public PlayerController playerA2;
+    public PlayerController playerB2;
+
     [Header("Ajustes de penetración")]
     [Range(0f, 1f)] public float penetrationPercent = 0.8f;
     public float penetrationSlop = 0.001f;
@@ -28,15 +31,35 @@ public class Colisiones : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (playerA && playerB) ResolveCapsuleVsCapsule(playerA, playerB);
+        var players = new System.Collections.Generic.List<PlayerController>();
 
-        // Pierna primero
-        if (playerA && ball) ResolveLegVsCircle(playerA, ball);
-        if (playerB && ball) ResolveLegVsCircle(playerB, ball);
+        if (playerA && playerA.gameObject.activeInHierarchy) players.Add(playerA);
+        if (playerB && playerB.gameObject.activeInHierarchy) players.Add(playerB);
+        if (playerA2 && playerA2.gameObject.activeInHierarchy) players.Add(playerA2);
+        if (playerB2 && playerB2.gameObject.activeInHierarchy) players.Add(playerB2);
 
-        // Cuerpo después
-        if (playerA && ball) ResolveCapsuleVsCircle(playerA, ball);
-        if (playerB && ball) ResolveCapsuleVsCircle(playerB, ball);
+        // Jugador vs jugador (todas las parejas)
+        for (int i = 0; i < players.Count; i++)
+        {
+            for (int j = i + 1; j < players.Count; j++)
+            {
+                ResolveCapsuleVsCapsule(players[i], players[j]);
+            }
+        }
+
+        if (ball == null) return;
+
+        // Pierna vs balón (todas las piernas)
+        for (int i = 0; i < players.Count; i++)
+        {
+            ResolveLegVsCircle(players[i], ball);
+        }
+
+        // Cuerpo vs balón
+        for (int i = 0; i < players.Count; i++)
+        {
+            ResolveCapsuleVsCircle(players[i], ball);
+        }
     }
 
     static Vector2 ClosestPointOnSegment(Vector2 a, Vector2 b, Vector2 p)

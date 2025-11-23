@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: MenuP
+  m_Name: winnerB
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -21,9 +21,9 @@ AnimationClip:
   - serializedVersion: 2
     curve:
     - time: 0
-      value: {fileID: -198938125430884413, guid: b3e325cce305e2042b67260fa79a437b, type: 3}
+      value: {fileID: 2006578453, guid: 99bcd8e5cdb0106488eb6c92f56203cc, type: 3}
     - time: 0.33333334
-      value: {fileID: -280711863, guid: b3e325cce305e2042b67260fa79a437b, type: 3}
+      value: {fileID: -635028687, guid: 99bcd8e5cdb0106488eb6c92f56203cc, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -46,8 +46,8 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     pptrCurveMapping:
-    - {fileID: -198938125430884413, guid: b3e325cce305e2042b67260fa79a437b, type: 3}
-    - {fileID: -280711863, guid: b3e325cce305e2042b67260fa79a437b, type: 3}
+    - {fileID: 2006578453, guid: 99bcd8e5cdb0106488eb6c92f56203cc, type: 3}
+    - {fileID: -635028687, guid: 99bcd8e5cdb0106488eb6c92f56203cc, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}

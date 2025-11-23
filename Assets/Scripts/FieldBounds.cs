@@ -17,6 +17,8 @@ public class FieldBounds : MonoBehaviour
     public Ball ball;
     public PlayerController playerA;
     public PlayerController playerB;
+    public PlayerController playerA2;
+    public PlayerController playerB2;
 
     [Header("Paredes / palos de la cancha")]
     public WallSegment[] walls;
@@ -32,11 +34,17 @@ public class FieldBounds : MonoBehaviour
         if (ball != null)
             ResolveBall(dt);
 
-        if (playerA != null)
+        if (playerA != null && playerA.gameObject.activeInHierarchy)
             ResolvePlayer(playerA, dt);
 
-        if (playerB != null)
+        if (playerB != null && playerB.gameObject.activeInHierarchy)
             ResolvePlayer(playerB, dt);
+
+        if (playerA2 != null && playerA2.gameObject.activeInHierarchy)
+            ResolvePlayer(playerA2, dt); 
+
+        if (playerB2 != null && playerB2.gameObject.activeInHierarchy)
+            ResolvePlayer(playerB2, dt);   
     }
 
     // ================== BALL ==================

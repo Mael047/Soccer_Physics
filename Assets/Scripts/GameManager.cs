@@ -2,21 +2,59 @@ using UnityEngine;
 using System.Collections;
 using TMPro;
 
+[System.Serializable]
+public class BallSettings
+{
+    public string nombre;
+
+    [Header("Fï¿½sicas")]
+    public float radius = 0.2f;
+    public float masa = 1f;
+    public float e = 0.7f;
+    public float g = 9.8f;
+    public float spin = 1.2f;
+
+    [Header("Visual")]
+    public Vector3 localScale = Vector3.one;
+    public Sprite sprite;
+}
+
 public class GameManager : MonoBehaviour
 {
-    [Header("Líneas de gol")]
+    [Header("Game")]
+    public GameObject game;
+
+    [Header("Lï¿½neas de gol")]
     public GoalLine leftGoal;
     public GoalLine rightGoal;
+
+    [Header("Modos de juego")]
+    public bool twoPlayersPerTeam = false;
 
     [Header("Entidades")]
     public Ball ball;
     public PlayerController playerA;
     public PlayerController playerB;
 
+    [Header("Variantes de balï¿½n")]
+    public BallSettings normalBallConfig;
+    public BallSettings beachBallConfig;
+    public bool randomizeBallEachRound = true;
+
+    BallSettings currentBallConfig;
+
+    [Header("Players 2v2")]
+    public PlayerController playerA2;
+    public PlayerController playerB2;
+
     [Header("Spawns (opcionales)")]
     public Transform spawnBall;
     public Transform spawnA;
     public Transform spawnB;
+
+    [Header("Spawns 2v2")]
+    public Transform spawnA2;
+    public Transform spawnB2;
 
     [Header("Spawns Balon")]
     public Transform ballSpawnA;
@@ -42,12 +80,17 @@ public class GameManager : MonoBehaviour
     public AudioClip General;
     public AudioClip startMatch;
 
+    [Header("Winner")]
+    public GameObject winnerA;
+    public GameObject winnerB;
+
     public Menu Menu;
     int scoreA, scoreB;
     bool roundLock;
 
     // autospawn
     Vector3 initBall, initA, initB;
+    Vector3 initA2, initB2;
     bool hasInit;
 
     void Awake()
@@ -63,15 +106,34 @@ public class GameManager : MonoBehaviour
         initBall = (spawnBall ? spawnBall.position : (ball ? ball.transform.position : Vector3.zero));
         initA = (spawnA ? spawnA.position : (playerA ? playerA.transform.position : Vector3.zero));
         initB = (spawnB ? spawnB.position : (playerB ? playerB.transform.position : Vector3.zero));
+
+        if (playerA2)
+            initA2 = (spawnA2 ? spawnA2.position : (playerA2 ? playerA2.transform.position : Vector3.zero));
+        if (playerB2)
+            initB2 = (spawnB2 ? spawnB2.position : (playerB2 ? playerB2.transform.position : Vector3.zero));
+
         hasInit = (ball && playerA && playerB);
 
         UpdateScoreUI();
         HideBanner();
 
+        if (randomizeBallEachRound)
+        {
+            PickRandomBallAndApply();
+        }
+        else
+        {
+            // Por defecto usar el balï¿½n normal
+            ApplyBallSettings(normalBallConfig);
+        }
+    
+
         if(audioSource && General)
         {
             audioSource.PlayOneShot(General);
         }
+
+        
     }
 
     public void OnGoal(int scorerId)
@@ -82,7 +144,7 @@ public class GameManager : MonoBehaviour
         if (scorerId == 1) scoreA++; else scoreB++;
         Debug.Log($"[GameManager] GOL de Player {scorerId}  -> marcador: P1 {scoreA} - {scoreB} P2");
 
-        ShowBanner($"¡Gol de Player {scorerId}!");
+        ShowBanner($"Â¡Gol de Player {scorerId}!");
         UpdateScoreUI();
 
         if (audioSource && goalSound)
@@ -100,6 +162,8 @@ public class GameManager : MonoBehaviour
     {
         // deja ver el banner
         yield return new WaitForSeconds(bannerTime);
+
+        PickRandomBallAndApply();
 
         DoHardResetPositions();
 
@@ -119,10 +183,18 @@ public class GameManager : MonoBehaviour
 
     IEnumerator EndMatch()
     {
-        string winner = (scoreA > scoreB) ? "Player 1" : "Player 2";
-        ShowBanner($"Partido terminado. ¡Gana {winner}!");
         yield return new WaitForSeconds(resetTime);
-        Menu.Volver();
+        game.SetActive(false);
+        if(scoreA > scoreB && winnerA != null)
+        {
+            winnerA.SetActive(true);
+        }
+        else if(scoreB > scoreA && winnerB != null)
+        {
+            winnerB.SetActive(true);
+        }
+        yield return new WaitForSeconds(resetTime);
+        Menu.cambiarEscena(0);
         Debug.Log("[GameManager] Fin de partido. Usa R para reiniciar.");
     }
 
@@ -153,6 +225,9 @@ public class GameManager : MonoBehaviour
         Vector3 pA = spawnA ? spawnA.position : initA;
         Vector3 pB = spawnB ? spawnB.position : initB;
 
+        Vector3 pA2 = playerA2 ? (spawnA2 ? spawnA2.position : initA2) : Vector3.zero;
+        Vector3 pB2 = playerB2 ? (spawnB2 ? spawnB2.position : initB2) : Vector3.zero;
+
         // ---- Ball: pisa transform y variables internas ----
         if (ball)
         {
@@ -168,6 +243,18 @@ public class GameManager : MonoBehaviour
         // ---- Players: pisa transform y variables internas ----
         if (playerA) HardResetPlayer(playerA, pA);
         if (playerB) HardResetPlayer(playerB, pB);
+
+        if (twoPlayersPerTeam)
+        {
+            if (playerA2) HardResetPlayer(playerA2, pA2);
+            if (playerB2) HardResetPlayer(playerB2, pB2);
+        }
+        else
+        {
+            // si no estamos en modo 2 vs 2
+            if (playerA2) playerA2.gameObject.SetActive(false);
+            if (playerB2) playerB2.gameObject.SetActive(false);
+        }
     }
 
     void HardResetPlayer(PlayerController p, Vector3 pos)
@@ -205,4 +292,53 @@ public class GameManager : MonoBehaviour
             StartCoroutine(ResetRound());
         }
     }
+
+    public void SetTwoPlayersPerTeam(bool enable)
+    {
+        twoPlayersPerTeam = enable;
+
+        if (playerA2)
+            playerA2.gameObject.SetActive(enable);
+
+        if (playerB2)
+            playerB2.gameObject.SetActive(enable);
+
+        DoHardResetPositions();
+    }
+
+    void ApplyBallSettings(BallSettings cfg)
+    {
+        if (ball == null || cfg == null) return;
+
+        // Fï¿½sicas
+        ball.radius = cfg.radius;
+        ball.masa = cfg.masa;
+        ball.e = cfg.e;
+        ball.g = cfg.g;
+        ball.spin = cfg.spin;
+
+        // Escala visual
+        ball.transform.localScale = cfg.localScale;
+
+        // Sprite opcional
+        var sr = ball.GetComponent<SpriteRenderer>();
+        if (sr != null && cfg.sprite != null)
+        {
+            sr.sprite = cfg.sprite;
+        }
+
+        currentBallConfig = cfg;
+    }
+
+    void PickRandomBallAndApply()
+    {
+        if (!randomizeBallEachRound) return;
+
+        
+        BallSettings chosen = (Random.value < 0.5f) ? normalBallConfig : beachBallConfig;
+        ApplyBallSettings(chosen);
+    }
+
+
+
 }
